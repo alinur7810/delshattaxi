@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="ru" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>DELSHAT Taxi — Поездки Бишкек, Алматы и Кыргызстан</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="logo-container">
+        <a href="./index.html">
+          <img class="logo" src="./83a5d840-2787-4783-8807-906c97ce6bd3.png" alt="DELSHAT Taxi Logo" />
+        </a>
+      </div>
+
+      <div class="header-actions">
+        <details class="dropdown">
+          <summary class="btn-category">
+            <span>Категории</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+
+          <ul class="dropdown-content custom-menu">
+            <li><a href="./lll.html">🏎️ Легковые</a></li>
+            <li><a href="./kkk.html">🚙 Кроссоверы</a></li>
+            <li><a href="./mmm.html">🚐 Минивэны</a></li>
+            <li><a href="./ppp.html">🚌 Пассажирские бусики</a></li>
+          </ul>
+        </details>
+
+        <!-- ОБНОВЛЕННЫЙ БЛОК ПОИСКА -->
+        <div class="search-wrapper">
+          <label class="search-box">
+            <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none" stroke="currentColor">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.3-4.3"></path>
+              </g>
+            </svg>
+            <input type="search" id="searchInput" placeholder="Поиск авто..." autocomplete="off" />
+          </label>
+          <!-- Сюда будут падать результаты поиска -->
+          <div id="searchResults" class="search-results-container"></div>
+        </div>
+
+        <div class="rating-stars">
+          <span class="rating-label">Оценка:</span>
+          <div class="rating rating-sm">
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-yellow-400" />
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-yellow-400" />
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-yellow-400" />
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-yellow-400" />
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-yellow-400" checked />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO SECTION (С ФОНОВОЙ РАЗМЫТОЙ КАРТИНКОЙ КАК НА СКРИНШОТЕ 1) -->
+    <section class="hero">
+      <!-- ФОНОВАЯ РАЗМЫТАЯ КАРТИНКА -->
+      <img
+        class="background-car"
+        src="https://avadge.com/media/catalog/car_photos/kia/carnival-4th-generation-hev-9-seater-x-line/2025-1.6-hybrid/imgi_30_41673438_001.webp"
+        alt="Background Taxi"
+      />
+
+      <!-- ЛЕВАЯ КАРТОЧКА: ФОТО АВТО С СО СЛАЙДЕРОМ -->
+      <div class="hero-card">
+        <div class="carousel w-full car-slider">
+          <div id="kia1" class="carousel-item relative w-full">
+            <img src="https://s.auto.drom.ru/i24272/c/photos/fullsize/kia/carnival/kia_carnival_1084455.jpg" class="w-full object-cover" />
+            <div class="absolute flex justify-between transform -translate-y-1/2 left-2 right-2 top-1/2">
+              <a href="#kia3" class="btn btn-circle btn-sm btn-warning">❮</a>
+              <a href="#kia2" class="btn btn-circle btn-sm btn-warning">❯</a>
+            </div>
+          </div> 
+          <div id="kia2" class="carousel-item relative w-full">
+            <img src="https://koreablizko.ru/uploads/s/x/s/q/xsqfyn3blcyw/img/autocrop/c28396f3497f817356d5ad4358e482d9.jpg" class="w-full object-cover" />
+            <div class="absolute flex justify-between transform -translate-y-1/2 left-2 right-2 top-1/2">
+              <a href="#kia1" class="btn btn-circle btn-sm btn-warning">❮</a>
+              <a href="#kia3" class="btn btn-circle btn-sm btn-warning">❯</a>
+            </div>
+          </div> 
+          <div id="kia3" class="carousel-item relative w-full">
+            <img src="https://korea.pa-server.ru/files/2176000/2175315/800/a1ffca19-b893-40d0-aab1-7b3f908a890d.webp" class="w-full object-cover" />
+            <div class="absolute flex justify-between transform -translate-y-1/2 left-2 right-2 top-1/2">
+              <a href="#kia2" class="btn btn-circle btn-sm btn-warning">❮</a>
+              <a href="#kia1" class="btn btn-circle btn-sm btn-warning">❯</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ПРАВАЯ КАРТОЧКА: ТЕКСТ С ИНФОРМАЦИЕЙ ОТ ОТЦА -->
+      <div class="hero-card">
+        <div class="description">
+          <h1>DELSHAT TAXI</h1>
+          <h2>Пассажирские перевозки: Бишкек — Алматы и весь Кыргызстан</h2>
+          <p>
+            Комфортабельный минивэн <strong>Kia Carnival</strong> (до 6 пассажиров + багаж). 
+            Просторный салон, регулируемые кресла, 2 кондиционера/климат-контроль, USB-зарядки, тонировка, бесплатный Wi-Fi в пути и влажные салфетки.
+          </p>
+          <ul class="hero-features">
+            <li><strong>Опытный водитель:</strong> 31 год водительского стажа (16 лет по маршруту Бишкек — Алматы).</li>
+            <li><strong>Сервис:</strong> Помощь с прохождением границы, остановки по требованию, встречи в аэропорту Алматы и «Манас».</li>
+            <li><strong>Услуги:</strong> Семейные и деловые поездки, трансферы, организация кортежей для групповых выездов.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ВТОРАЯ МАШИНА: TOYOTA COROLLA 2017 -->
+    <section class="info-section">
+      <div class="second-car-card">
+        <div class="carousel car-slider">
+          <div id="corolla1" class="carousel-item relative w-full">
+            <img src="https://image-server.autospot.ru/images/1/0/3/3/1/1/11727484/origin/11727484.png" class="w-full object-cover" />
+            <div class="absolute flex justify-between transform -translate-y-1/2 left-2 right-2 top-1/2">
+              <a href="#corolla2" class="btn btn-circle btn-sm btn-warning">❮</a>
+              <a href="#corolla2" class="btn btn-circle btn-sm btn-warning">❯</a>
+            </div>
+          </div>
+          <div id="corolla2" class="carousel-item relative w-full">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT888I5f7-1aiVh8kfHdql8kp8TkOw9gF3zy-YKBBxKNeU-NZ6zcvJk08I&s=10" class="w-full object-cover" />
+            <div class="absolute flex justify-between transform -translate-y-1/2 left-2 right-2 top-1/2">
+              <a href="#corolla1" class="btn btn-circle btn-sm btn-warning">❮</a>
+              <a href="#corolla1" class="btn btn-circle btn-sm btn-warning">❯</a>
+            </div>
+          </div>
+        </div>
+        <div class="second-car-info">
+          <h3>Toyota Corolla (2017)</h3>
+          <p>Надежный седан для городских поездок по Бишкеку, быстрых выездов и трансферов. Идеально чистый салон, кондиционер и аккуратный стиль вождения.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- СТАТИСТИКА -->
+    <section class="stats-section">
+      <div class="stat-item">
+        <span class="stat-num">31 год</span>
+        <span class="stat-text">Водительского стажа</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">16 лет</span>
+        <span class="stat-text">Опыта по трассе Бишкек — Алматы</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">с 2010 г.</span>
+        <span class="stat-text">Работаем в сфере перевозок</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">24/7</span>
+        <span class="stat-text">Круглосуточные выезды</span>
+      </div>
+    </section>
+
+    <!-- КЛАССЫ АВТОМОБИЛЕЙ (ТАРИФЫ) -->
+    <section class="info-section">
+      <h2 class="section-title">Классы нашего автопарка</h2>
+      <div class="tariffs-grid">
+        <div class="tariff-card">
+          <div class="tariff-header">Легковые (Седаны)</div>
+          <div class="tariff-desc">Быстрые авто для городских поездок и экспресс-выездов. До 4 пассажиров.</div>
+        </div>
+        <div class="tariff-card">
+          <div class="tariff-header">Кроссоверы</div>
+          <div class="tariff-desc">Повышенный уровень комфорта и проходимости для любых дорог Кыргызстана.</div>
+        </div>
+        <div class="tariff-card highlighted">
+          <div class="tariff-badge">Популярный выбор</div>
+          <div class="tariff-header">Минивэны</div>
+          <div class="tariff-desc">Комфортабельные для дальних поездок, семей и трансферов в Алматы.</div>
+        </div>
+        <div class="tariff-card">
+          <div class="tariff-header">Пассажирские бусики</div>
+          <div class="tariff-desc">Вместительные микроавтобусы и кортежи для больших туристических групп и выездов.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER СО ССЫЛКАМИ (WHATSAPP, INSTAGRAM, DIESEL) -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img class="footer-logo" src="./83a5d840-2787-4783-8807-906c97ce6bd3.png" alt="DELSHAT Taxi" />
+          <p>DELSHAT TAXI — Комфорт и безопасность на дорогах Кыргызстана и Казахстана.</p>
+        </div>
+
+        <div class="footer-info">
+          <h4>Режим работы</h4>
+          <p>Круглосуточно (24/7)</p>
+          <p>Без выходных и праздников</p>
+        </div>
+
+        <div class="footer-socials">
+          <h4>Мы в соцсетях и связь</h4>
+          <div class="social-links">
+            <a href="https://wa.me/+996772501599" target="_blank" class="social-btn whatsapp">
+              💬 WhatsApp (+996 772 501 599)
+            </a>
+            <a href="https://www.instagram.com/delshat_taxi?utm_source=qr&igsh=MTNvOHk1eW4zMDFvNw==" target="_blank" class="social-btn instagram">
+              📷 Instagram (@delshat_taxi)
+            </a>
+            <a href="https://diesel.elcat.kg/index.php?showtopic=10500466" target="_blank" class="social-btn diesel">
+              💬 Тема на Diesel Forum
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 DELSHAT Taxi. Все права защищены.</p>
+      </div>
+    </footer>
+    <!-- СКРИПТ ДЛЯ РАБОТЫ ПОИСКА -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+          const searchInput = document.getElementById('searchInput');
+          const searchResults = document.getElementById('searchResults');
+
+          // Наша мини-база данных всех машин со всех страниц
+          const cars = [
+              { name: "Kia Carnival 2018", category: "Минивэны", seats: "7 мест", img: "https://koreablizko.ru/uploads/s/x/s/q/xsqfyn3blcyw/img/autocrop/c28396f3497f817356d5ad4358e482d9.jpg", link: "./mmm.html" },
+              { name: "Toyota Corolla 2017", category: "Легковые", seats: "4 места", img: "https://image-server.autospot.ru/images/1/0/3/3/1/1/11727484/origin/11727484.png", link: "./index.html" },
+              { name: "Lexus RX350 2011", category: "Кроссоверы", seats: "5 мест", img: "https://photos.carspecs.us/968cfab0cbdc61e4129dc6967517bae3199c8b2d-2000.jpg", link: "./kkk.html" },
+              { name: "Kia Sorento 2018", category: "Кроссоверы", seats: "до 5-7 мест", img: "https://storage.mashina.kg/catalog/images/2026-07-10/10081783/21609a5b438b4eb5fafe85d639d57013_medium.webp", link: "./kkk.html" },
+              { name: "Kia K7 2018", category: "Легковые", seats: "5 мест", img: "https://blik.kg/_next/image?url=https%3A%2F%2Fs3.twcstorage.ru%2F8c688505-3dabaa86-549a-4d28-8211-4c36d5be2120%2Flistings%2Fcars%2F01ktp6vrx51svt413p3dqtsbkf%2F14b2a0ae-352c-463e-8120-2f6430addca7.webp&w=1920&q=70", link: "./lll.html" },
+              { name: "Lexus ES350 2017", category: "Легковые", seats: "5 мест", img: "https://i.ytimg.com/vi/8yNRk9ph3co/maxresdefault.jpg", link: "./lll.html" },
+              { name: "Toyota Sienna 2017", category: "Минивэны", seats: "До 7-8 мест", img: "https://i.gaw.to/content/photos/30/41/304182_2017_Toyota_Sienna.jpg?1024x640", link: "./mmm.html" },
+              { name: "Mercedes-Benz Sprinter 2006", category: "Пассажирские бусики", seats: "20 мест", img: "./5429186799768115618.jpg", link: "./ppp.html" }
+          ];
+
+          // Слушаем, что вводит пользователь
+          searchInput.addEventListener('input', function() {
+              const query = this.value.toLowerCase().trim();
+              searchResults.innerHTML = ''; // Очищаем старые результаты
+
+              // Если строка пустая - прячем окошко
+              if (query.length === 0) {
+                  searchResults.classList.remove('active');
+                  return;
+              }
+
+              // Ищем совпадения в названии машины
+              const filteredCars = cars.filter(car => car.name.toLowerCase().includes(query));
+
+              // Если нашли машины
+              if (filteredCars.length > 0) {
+                  filteredCars.forEach(car => {
+                      const item = document.createElement('a');
+                      item.href = car.link;
+                      item.className = 'search-result-item';
+                      item.innerHTML = `
+                          <img src="${car.img}" alt="${car.name}">
+                          <div class="search-result-info">
+                              <h4>${car.name}</h4>
+                              <p>${car.category} • ${car.seats}</p>
+                          </div>
+                      `;
+                      searchResults.appendChild(item);
+                  });
+              } else {
+                  // Если ничего не нашли
+                  searchResults.innerHTML = '<div class="no-results">Ничего не найдено 😔</div>';
+              }
+
+              // Показываем окошко
+              searchResults.classList.add('active');
+          });
+
+          // Прячем результаты, если кликнули куда-то в другое место на сайте
+          document.addEventListener('click', function(e) {
+              if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
+                  searchResults.classList.remove('active');
+              }
+          });
+      });
+    </script>
+  </body>
+</html>

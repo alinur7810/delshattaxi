@@ -1,0 +1,37 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+# 1. Добавляем обязательные права доступа
+permissions:
+  contents: read
+  id-token: write
+  pages: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Шаг 1: Скачиваем ваш код из репозитория
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Шаг 2: Настраиваем внутренности GitHub Pages
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      # Шаг 3: Загружаем файлы вашего сайта (артефакт)
+      # Если ваш сайт лежит в корне, оставляем path: '.'
+      # Если код сайта в отдельной папке (например, dist или build), замените '.' на название папки
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.' 
+
+      # Шаг 4: Сам деплой (публикация) на сервер
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v5
