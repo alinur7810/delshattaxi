@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    margin: 10px;
+    /* Убрал отсюда margin: 10px, так как он ломал верстку всех элементов */
 }
 
 body {
@@ -31,6 +31,7 @@ body {
 .content {
     display: flex;
     justify-content: center;
+    margin-bottom: 30px; /* Добавил отступ снизу, чтобы карточки не слипались */
 }
 
 .card {
@@ -71,4 +72,19 @@ body {
     padding: 12px 24px;
     border-radius: 10px;
     text-decoration: none;
+}
+
+/* ---------- ФИКС ДЛЯ МОБИЛЬНЫХ ТЕЛЕФОНОВ ---------- */
+@media (max-width: 768px) {
+    .pic {
+        height: 220px; /* Делаем картинку ниже на телефонах, чтобы не срезало бока */
+    }
+    
+    .content {
+        padding: 0 10px; /* Аккуратные отступы по краям экрана */
+    }
+    
+    .header {
+        margin-bottom: 25px;
+    }
 }
